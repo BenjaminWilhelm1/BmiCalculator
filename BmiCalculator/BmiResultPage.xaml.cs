@@ -1,6 +1,6 @@
 ﻿namespace BmiCalculator;
 
-[QueryProperty(nameof(Height), "height")]
+[QueryProperty(nameof(UserHeight), "height")]
 [QueryProperty(nameof(Weight), "weight")]
 [QueryProperty(nameof(Gender), "gender")]
 public partial class BmiResultPage : ContentPage
@@ -11,7 +11,7 @@ public partial class BmiResultPage : ContentPage
 
     //  Query Properties 
 
-    public string Height
+    public string UserHeight
     {
         set
         {

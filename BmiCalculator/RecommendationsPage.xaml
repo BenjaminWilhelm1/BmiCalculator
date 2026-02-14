@@ -1,11 +1,141 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BmiCalculator.RecommendationsPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
-</ContentView>
+             x:Class="BmiCalculator.RecommendationsPage"
+             Title="Health Recommendations"
+             BackgroundColor="#F0F0F0">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- Page Header -->
+            <Label Text="Health Recommendations"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#2B1B6E" />
+
+            <!-- Summary -->
+            <Frame CornerRadius="12"
+                   Padding="20"
+                   HasShadow="True"
+                   BackgroundColor="White"
+                   BorderColor="Transparent">
+                <VerticalStackLayout Spacing="8" HorizontalOptions="Center">
+                    <Label Text="Your Summary"
+                           FontSize="16"
+                           HorizontalOptions="Center"
+                           TextColor="#666666" />
+                    <Label x:Name="SummaryLabel"
+                           Text=""
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           TextColor="#333333" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Recommendation 1 -->
+            <Frame CornerRadius="12"
+                   Padding="20"
+                   HasShadow="True"
+                   BackgroundColor="White"
+                   BorderColor="Transparent"
+                   x:Name="Rec1Frame">
+                <HorizontalStackLayout Spacing="12">
+                    <Label Text="1"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           BackgroundColor="#2B1B6E"
+                           WidthRequest="36"
+                           HeightRequest="36"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center" />
+                    <Label x:Name="Rec1Label"
+                           Text=""
+                           FontSize="15"
+                           TextColor="#333333"
+                           VerticalOptions="Center"
+                           LineBreakMode="WordWrap"
+                           HorizontalOptions="FillAndExpand" />
+                </HorizontalStackLayout>
+            </Frame>
+
+            <!-- Recommendation 2 -->
+            <Frame CornerRadius="12"
+                   Padding="20"
+                   HasShadow="True"
+                   BackgroundColor="White"
+                   BorderColor="Transparent"
+                   x:Name="Rec2Frame">
+                <HorizontalStackLayout Spacing="12">
+                    <Label Text="2"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           BackgroundColor="#2B1B6E"
+                           WidthRequest="36"
+                           HeightRequest="36"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center" />
+                    <Label x:Name="Rec2Label"
+                           Text=""
+                           FontSize="15"
+                           TextColor="#333333"
+                           VerticalOptions="Center"
+                           LineBreakMode="WordWrap"
+                           HorizontalOptions="FillAndExpand" />
+                </HorizontalStackLayout>
+            </Frame>
+
+            <!-- Recommendation 3 -->
+            <Frame CornerRadius="12"
+                   Padding="20"
+                   HasShadow="True"
+                   BackgroundColor="White"
+                   BorderColor="Transparent"
+                   x:Name="Rec3Frame">
+                <HorizontalStackLayout Spacing="12">
+                    <Label Text="3"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           BackgroundColor="#2B1B6E"
+                           WidthRequest="36"
+                           HeightRequest="36"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center" />
+                    <Label x:Name="Rec3Label"
+                           Text=""
+                           FontSize="15"
+                           TextColor="#333333"
+                           VerticalOptions="Center"
+                           LineBreakMode="WordWrap"
+                           HorizontalOptions="FillAndExpand" />
+                </HorizontalStackLayout>
+            </Frame>
+
+            <!-- Navigation Buttons -->
+            <Button Text="Back to BMI Result"
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    BackgroundColor="#2B1B6E"
+                    TextColor="White"
+                    CornerRadius="12"
+                    HeightRequest="55"
+                    Clicked="OnBackToResultClicked" />
+
+            <Button Text="Back to Input"
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    BackgroundColor="#757575"
+                    TextColor="White"
+                    CornerRadius="12"
+                    HeightRequest="55"
+                    Clicked="OnBackToInputClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

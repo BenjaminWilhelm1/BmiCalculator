@@ -13,7 +13,7 @@
             <Color x:Key="PrimaryColor">#2B1B6E</Color>
             <Color x:Key="AccentColor">#E91E63</Color>
             <Color x:Key="MaleColor">#42A5F5</Color> <!-- Dudes get blue -->
-            <Color x:Key="AccentColor">#EC407A</Color> <!-- Girls get pink/red idk depends on monitor -->
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>

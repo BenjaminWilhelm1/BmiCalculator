@@ -1,11 +1,107 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BmiCalculator.BmiResultPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
-</ContentView>
+             x:Class="BmiCalculator.BmiResultPage"
+             Title="BMI Result"
+             BackgroundColor="#F0F0F0">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20"
+                             VerticalOptions="Center">
+
+            <!-- Page Header -->
+            <Label Text="Your BMI Result"
+                   FontSize="26"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#2B1B6E" />
+
+            <!-- BMI Value Displayed -->
+            <Frame CornerRadius="100"
+                   WidthRequest="200"
+                   HeightRequest="200"
+                   Padding="0"
+                   HasShadow="True"
+                   BackgroundColor="White"
+                   BorderColor="#2B1B6E"
+                   HorizontalOptions="Center">
+                <VerticalStackLayout VerticalOptions="Center"
+                                     HorizontalOptions="Center"
+                                     Spacing="5">
+                    <Label x:Name="BmiValueLabel"
+                           Text="0.0"
+                           FontSize="48"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           TextColor="#2B1B6E" />
+                    <Label Text="BMI"
+                           FontSize="16"
+                           HorizontalOptions="Center"
+                           TextColor="#666666" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Gender -->
+            <Frame CornerRadius="12"
+                   Padding="15"
+                   HasShadow="True"
+                   BackgroundColor="White"
+                   BorderColor="Transparent">
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                    <Label Text="Gender:"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="#333333"
+                           VerticalOptions="Center" />
+                    <Label x:Name="GenderLabel"
+                           Text=""
+                           FontSize="18"
+                           TextColor="#555555"
+                           VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </Frame>
+
+            <!-- Health Status and Bmi Category -->
+            <Frame CornerRadius="12"
+                   Padding="20"
+                   HasShadow="True"
+                   BackgroundColor="White"
+                   BorderColor="Transparent"
+                   x:Name="StatusFrame">
+                <VerticalStackLayout Spacing="8" HorizontalOptions="Center">
+                    <Label Text="BMI Category"
+                           FontSize="16"
+                           HorizontalOptions="Center"
+                           TextColor="#666666" />
+                    <Label x:Name="HealthStatusLabel"
+                           Text=""
+                           FontSize="24"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           TextColor="#333333" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Navigation Buttons -->
+            <Button Text="View Health Recommendations"
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    BackgroundColor="#2B1B6E"
+                    TextColor="White"
+                    CornerRadius="12"
+                    HeightRequest="55"
+                    Clicked="OnViewRecommendationsClicked" />
+
+            <Button Text="Back to Input"
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    BackgroundColor="#757575"
+                    TextColor="White"
+                    CornerRadius="12"
+                    HeightRequest="55"
+                    Clicked="OnBackToInputClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
